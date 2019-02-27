@@ -1,0 +1,6 @@
+def reverse(st):
+    text=st.split()
+    text.reverse()
+    st=" ".join(text)
+    return st
+    
