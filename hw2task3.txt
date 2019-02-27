@@ -1,0 +1,10 @@
+x = (int(input("Enter num 1: ")))
+y = (int(input("Enter num 2: ")))
+   
+x = x + y   
+  
+y = x - y  
+   
+x = x - y   
+print("After Swapping:\n num 1 =",x ,"\n num 2 =", y);
+
