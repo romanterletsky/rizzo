@@ -1,0 +1,11 @@
+a=(input("Enter your num example '1234': "))
+b = tuple(a)
+c= int (b[1])* int(b[2])* int (b[3])* int (b[0])
+print ("Dobutok = ",c)
+
+
+print ("Reverse: ",((b[3])+(b[2])+(b[1])+(b[0])))
+
+q=[(b[0]),(b[1]),(b[2]),(b[3])]
+g=(sorted(q))
+print (("Sorted: "),(g[3])+(g[2])+(g[1])+(g[0]))
