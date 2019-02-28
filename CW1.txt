@@ -1,0 +1,30 @@
+print ("################################\n")
+a= int(input("Enter num_1: "))
+b= int(input("Enter num_2: "))
+
+if a>b:
+	print ("num_1 більше num_2")
+	
+else:
+	print ("num_1 менше num_2")
+
+print ("\n################################\n")
+
+a = int(input("Enter your number: "))
+
+if a%2 == 0:
+    print ("This num is parne:)")
+else:
+    print ("This num is ne parne:(")
+
+print ("\n################################\n")
+
+n=int(input("Enter your fectorial: "))
+i = 1
+factorial = 1
+while i <= n:
+    factorial *= i
+    i += 1
+print("Fectorial",n, "=", factorial)
+
+print ("\n################################")
