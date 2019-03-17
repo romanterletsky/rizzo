@@ -1,0 +1,5 @@
+def filter_words(st):
+    string1 = st.capitalize()
+    string2 = string1.split()
+    string3 = " ".join(string2)
+    return string3
