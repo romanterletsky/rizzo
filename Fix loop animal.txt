@@ -1,0 +1,7 @@
+def list_animals(animals):
+    list = ''
+    num = 1
+    for i in animals:
+        list += str(num) + '. ' + i + '\n'
+        num += 1
+    return list
