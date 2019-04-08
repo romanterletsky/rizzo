@@ -1,0 +1,11 @@
+import random
+
+class Ghost(object):
+    """Create a Ghost
+    """
+    
+    def __init__(self):
+        """Give the Ghost a color
+        """
+        colors = ['white', 'red', 'yellow', 'purple']
+        self.color = random.choice(colors)
