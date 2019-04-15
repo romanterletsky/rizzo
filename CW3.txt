@@ -1,0 +1,130 @@
+#1.  Створити список цілих чисел, які вводяться з терміналу та визначити серед них максимальне та мінімальне число.
+#1
+arr = []
+while True:
+     x = input("Enter your num: ")
+     if not x:
+         break
+     arr.append(int(x))
+print(arr)
+print(min(arr))
+print(max(arr))
+
+#2
+n = int(input("Enter your size of the list: "))
+arr = [int(input("Enter your num: ")) for x in range(0, n)]
+print(arr)
+print(min(arr))
+print(max(arr))
+
+# 2.  В інтервалі від 1 до 10 визначити числа
+# •  парні, які діляться на 2,
+# •  непарні, які діляться на 3,
+# •  числа, які не діляться на 2 та 3.
+
+#1
+even = []
+odd_three_division = []
+not_three_not_two = []
+for x in range(11):
+    if x%2==0:
+        even.append(x)
+    elif x%2==1 and x%3==0:
+        odd_three_division.append(x)
+    elif x%2==1 and x%3==1:
+        not_three_not_two.append(x)
+print(even)
+print(odd_three_division)
+print(not_three_not_two)
+
+#2
+even = [x for x in range(11) if x%2==0]
+odd_three_division = [x for x in range(11) if x%2==1 and x%3==0]
+not_three_not_two = [x for x in range(11) if x%2==1 and x%3==1]
+print (even)
+print(odd_three_division)
+print(not_three_not_two)
+
+# 3.  Написати програму, яка обчислює факторіал числа, яке користувач вводить.(не використовувати рекурсивного виклику функції)
+
+#1
+x = int(input("Enter your num  want to get a factorial of, please: "))
+fact = 1
+for i in range(1, x+1):
+    if x == 0:
+        break
+    fact*=i
+print(fact)
+
+#2
+x = int(input("Enter a num you want to get a factorial of, please: "))
+i = 1
+fact = 1
+while i <= x:
+    if x == 0:
+        break
+    fact*=i
+    i+=1
+print(fact)
+
+# 4.  Напишіть скрипт, який перевіряє логін, який вводить користувач.
+# Якщо логін вірний (First), то привітайте користувача.
+# Якщо ні, то виведіть повідомлення про помилку.
+# (використайте цикл while)
+
+while True:
+    login = input("enter your login, please: ")
+    if login=="First":
+        print("hello, user")
+        break
+    print("i don't recognize you, try again")
+
+#5.  Перший випадок.
+#Написати програму, яка буде зчитувати числа поки не зустріне від’ємне число. При появі від’ємного числа програма зупиняється
+#(якщо зустрічається 0 програма теж зупиняється).
+arr = []
+for x in range(0, 20):
+    x = int(input("enter a number you want to append (must be a positive integer): "))
+    if x > 0:
+        arr.append(x)
+    print("follow the rules, please")
+    break
+print(arr)
+
+# 6.  Другий випадок.
+# На початку на вхід подається кількість елементів послідовності, а потім самі елементи. При появі від’ємного числа програма зупиняється
+# (якщо зустрічається 0 програма теж зупиняється).
+n = int(input("enter the size of the list: "))
+arr = []
+for x in range(n):
+    x = int(input("enter a number you want to append (must be a positive integer): "))
+    if x>0:
+        arr.append(x)
+    print("follow the rules, please!")
+    break
+print(arr)
+
+# 7.  Знайти прості числа від 10 до 30, а всі решта чисел представити у вигляді добутку чисел
+# (наприклад 10 equals 2 * 5
+#                     11 is a prime number
+#                     12 equals 2 * 6
+#                     13 is a prime number
+#                     14 equals 2 * 7
+#                      ………………….)
+
+for x in range(10,31):
+       for i in range(2,x):
+           division = int(x/i)
+           if (x % i) == 0:
+               print("{} is equal {} * {}".format(x, i, division))
+               break
+           else:
+               print("{} is a prime number".format(x))
+
+# 8.  Відсортувати слова в реченні в порядку їх довжини (використати List Comprehensions)
+
+st = "The house that Jack built"
+arr = st.split()
+arr.sort(key=len)
+st = ' '.join(arr)
+print(st)
